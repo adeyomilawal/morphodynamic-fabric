@@ -1,34 +1,206 @@
-Proprietary Research License
+Morphodynamic Fabric — Proprietary Research License
+Version 1.0 | Effective Date: February 27, 2026
 
 Copyright (c) 2026 Adeyomi Lawal — Lagos, Nigeria
+All Rights Reserved.
 
-The concepts, mathematical formalizations (TSN/ECA), architectural diagrams,
-theorems, and all written documentation contained in this repository are the
-intellectual property of the author.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this documentation to VIEW and CITE the research for academic, educational,
-or evaluation purposes, subject to the following conditions:
+1. DEFINITIONS
 
-1. The above copyright notice and this permission notice shall be included in
-   all copies or substantial portions of the documentation.
+"Documentation" refers to all written content in this repository, including
+but not limited to: the whitepaper, mathematical formalizations, theorems,
+proofs, architectural specifications, diagrams, benchmarks, pseudocode, and
+the CITATION.cff file.
 
-2. Proper attribution must be given to the author when referencing or building
-   upon these ideas in academic or commercial work.
+"Implementation" refers to any software, source code, compiled binary,
+firmware, script, or system that realizes, approximates, or is derived from
+the architectural patterns, algorithms, or mathematical specifications
+described in this Documentation.
 
-3. THE SOFTWARE IMPLEMENTATION (Source Code) IS NOT INCLUDED IN THIS REPOSITORY.
-   The mathematical proofs and architectural specifications describe a working
-   system; the implementation remains proprietary.
+"Core Architecture" refers specifically to: the Topological Semantic Network
+(TSN), the Emergent Coalition Assembler (ECA), the CAFCA process, the
+Contextual Resonance Gate, the Offline Graph Consolidation (OGC) mechanism,
+Anticipatory Cascade Routing (ACR), and all associated stability theorems
+and mathematical corollaries described herein.
 
-4. THE CONCEPTS, THEOREMS, AND ARCHITECTURAL PATTERNS MAY NOT BE USED FOR
-   COMMERCIAL COMPETITION OR PRODUCT DEVELOPMENT WITHOUT EXPLICIT WRITTEN
-   PERMISSION FROM THE AUTHOR.
+"Derivative Work" means any work — whether research, software, product,
+model, or service — that is substantially based on, inspired by, reproduces,
+or extends the Core Architecture or any material portion of this
+Documentation.
 
-5. Derivative research works must be clearly distinguished from this original
-   work and must cite the original author.
+"Commercial Use" means any use — direct or indirect — intended for or
+resulting in commercial advantage, monetary compensation, or integration into
+a product, service, or platform offered to third parties.
 
-THE DOCUMENTATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY ARISING FROM THE USE OF THIS DOCUMENTATION.
+"You" refers to any individual, organization, institution, or legal entity
+accessing, reading, referencing, or using this Documentation.
 
-For licensing inquiries or collaboration, open an issue on this repository.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. GRANT OF LIMITED PERMISSION
+
+Subject to the terms and conditions of this License, the Author grants You
+a limited, non-exclusive, non-transferable, non-sublicensable, revocable
+license to:
+
+  (a) READ and ACCESS this Documentation for personal study, academic
+      research, or evaluation purposes;
+
+  (b) CITE this work in academic publications, research papers, or
+      presentations, provided that proper attribution is given in accordance
+      with Section 4 of this License;
+
+  (c) REFERENCE the high-level architectural concepts in academic writing,
+      provided no reproduction of the mathematical specifications, theorems,
+      or formal proofs exceeds what is necessary for citation.
+
+No other rights are granted. All rights not expressly granted herein are
+reserved by the Author.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. RESTRICTIONS
+
+The following are expressly PROHIBITED without prior explicit written
+permission from the Author:
+
+  3.1 IMPLEMENTATION
+      You may not implement, develop, build, or deploy any software system,
+      agent framework, orchestration layer, or AI product that reproduces,
+      approximates, or is substantially derived from the Core Architecture
+      or any component thereof.
+
+  3.2 COMMERCIAL USE
+      You may not use this Documentation or any portion of the Core
+      Architecture for any Commercial Use, including: building competing
+      products, white-labelling, integrating into proprietary or open-source
+      agent frameworks, or selling derivative architectures.
+
+  3.3 AI AND MACHINE LEARNING TRAINING
+      You may not use this Documentation, in whole or in part, as training
+      data, fine-tuning data, RLHF data, preference data, or in any other
+      capacity to train, fine-tune, distill, align, or improve any machine
+      learning model, large language model, neural network, or AI system.
+
+  3.4 REVERSE ENGINEERING
+      You may not use this Documentation to reverse-engineer, reconstruct,
+      or approximate the proprietary Implementation. The mathematical
+      specifications are published to establish priority of invention and
+      enable peer verification — not to enable replication.
+
+  3.5 REDISTRIBUTION
+      You may not redistribute, republish, mirror, or archive this
+      Documentation or any substantial portion thereof on any platform,
+      database, or repository without the Author's explicit written consent.
+
+  3.6 DERIVATIVE WORKS
+      You may not create Derivative Works based on the Core Architecture
+      without a separate written license agreement with the Author.
+
+  3.7 PRIOR ART NOTICE
+      This public disclosure constitutes documented prior art as of
+      February 27, 2026. Any patent application filed by a third party
+      that covers methods, systems, or architectures substantially identical
+      to or derived from the Core Architecture described in this
+      Documentation is subject to prior art invalidation based on this
+      publication. The Author reserves the right to contest such
+      applications in any jurisdiction.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. ATTRIBUTION REQUIREMENTS
+
+Any permitted use under Section 2 must include the following attribution,
+reproduced exactly:
+
+  Lawal, Adeyomi. "The Morphodynamic Fabric: A Self-Organizing
+  Neuro-Symbolic Architecture for Efficient Autonomous Agents."
+  Independent Research, Lagos, Nigeria, 2026.
+  https://github.com/adeyomilawal/morphodynamic-fabric
+
+This attribution must appear in: citations, reference lists, footnotes,
+acknowledgements, and any other location where the work is referenced.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. PRIORITY OF INVENTION
+
+This repository establishes the Author's documented priority of invention
+for the Core Architecture as of February 27, 2026. The publication date
+of this repository constitutes a public disclosure establishing prior art
+in the Author's favor for all concepts described herein.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. INTELLECTUAL PROPERTY
+
+The Core Architecture, all mathematical formalizations, theorems, proofs,
+and the CAFCA process are the exclusive intellectual property of the Author.
+Nothing in this License transfers or waives any intellectual property rights.
+The Author reserves all copyright, trade secret rights, and all other
+applicable intellectual property rights in and to the Core Architecture
+and its Implementation. No patent has been filed at this time; the public
+disclosure of this Documentation serves as prior art establishing the
+Author's priority of invention.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7. TERMINATION
+
+Your rights under this License terminate automatically and immediately if
+You breach any of the terms herein. Upon termination, You must cease all
+use of the Documentation and destroy any copies in your possession. The
+Author may also terminate this License at any time upon written notice.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8. DISCLAIMER OF WARRANTIES
+
+THE DOCUMENTATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+THE AUTHOR MAKES NO REPRESENTATIONS REGARDING THE ACCURACY, COMPLETENESS,
+OR SUITABILITY OF THIS DOCUMENTATION FOR ANY PURPOSE.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+9. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF
+OR IN CONNECTION WITH YOUR USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGES.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+10. GOVERNING LAW
+
+This License shall be governed by and construed in accordance with the laws
+of the Federal Republic of Nigeria, without regard to its conflict of law
+provisions. Any disputes arising under this License shall be subject to
+the exclusive jurisdiction of the competent courts of Lagos State, Nigeria.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+11. CONTACT & LICENSING INQUIRIES
+
+For research collaboration, licensing discussions, or commercial partnership
+inquiries, contact the Author through the GitHub repository:
+
+  https://github.com/adeyomilawal/morphodynamic-fabric
+
+Academic correspondence and technical questions are welcome.
+Commercial licensing terms are available upon request.
+
+Any use of the Core Architecture for benchmarking, performance comparison,
+or comparative analysis must be conducted using the Author's official
+reference implementation or specifications. Unauthorized reimplementations
+of the Core Architecture for the purpose of benchmarking, competitive
+evaluation, or published comparison are strictly prohibited. Results derived
+from such unauthorized implementations may not be published, cited, or used
+to make claims about the performance of the Morphodynamic Fabric.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+END OF LICENSE
