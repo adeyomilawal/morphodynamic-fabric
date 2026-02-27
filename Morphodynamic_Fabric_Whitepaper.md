@@ -17,26 +17,26 @@
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                        THE MORPHODYNAMIC FABRIC                             │
 │                                                                             │
-│   ┌─────────────────────────────────────────────────────────────────────┐  │
-│   │                   LAYER 2: ECA (Behavioral)                        │  │
-│   │                                                                     │  │
-│   │    [Module A] ──coalition boost──► [Module B]                      │  │
-│   │         │         ▲    fatigue     │         ▲                     │  │
-│   │         │         │    decay ↓    │         │                     │  │
-│   │    salience    COALITION C     salience   lateral                  │  │
-│   │    filter      σ strength      filter     inhibition              │  │
-│   │         │                          │                              │  │
-│   │    [Module D] ◄──── energy budget ─── [Module E]                 │  │
-│   └─────────────────────────────────────────────────────────────────────┘  │
+│   ┌─────────────────────────────────────────────────────────────-────────┐  │
+│   │                   LAYER 2: ECA (Behavioral)                          │  │
+│   │                                                                      │  │
+│   │    [Module A] ──coalition boost──► [Module B]                        │  │
+│   │         │         ▲    fatigue     │         ▲                       │  │
+│   │         │         │    decay ↓     │         │                       │  │
+│   │    salience    COALITION C     salience   lateral                    │  │
+│   │    filter      σ strength      filter     inhibition                 │  │
+│   │         │                          │                                 │  │
+│   │    [Module D] ◄──── energy budget ─── [Module E]                     │  │
+│   └────────────────────────────────────────────────────────────-─────────┘  │
 │                              ▲  ▼  (coupled)                                │
-│   ┌─────────────────────────────────────────────────────────────────────┐  │
-│   │                   LAYER 1: TSN (Structural)                        │  │
-│   │                                                                     │  │
-│   │    Static Seed ──► strengthen(co-use) / decay(unused) ──► G*      │  │
-│   │                                                                     │  │
-│   │    [A]──w=0.9──►[B]──w=0.7──►[C]    (strong, surviving paths)    │  │
-│   │    [A]──w=0.1──►[D]           ✗      (weak, pruned)              │  │
-│   └─────────────────────────────────────────────────────────────────────┘  │
+│   ┌─────────────────────────────────────────────────────────────-────────┐  │
+│   │                   LAYER 1: TSN (Structural)                          │  │
+│   │                                                                      │  │
+│   │    Static Seed ──► strengthen(co-use) / decay(unused) ──► G*         │  │
+│   │                                                                      │  │
+│   │    [A]──w=0.9──►[B]──w=0.7──►[C]    (strong, surviving paths)        │  │
+│   │    [A]──w=0.1──►[D]           ✗      (weak, pruned)                  │  │
+│   └───────────────────────────────────────────────────────────────-──────┘  │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
