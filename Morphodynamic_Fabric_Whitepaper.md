@@ -305,11 +305,11 @@ The theorems above are enforced by four concrete mathematical laws operating at 
 
 Every processing cycle, each connection weight $w_{s \to t}$ is updated by two opposing forces:
 
-$$w_{s \to t}^{(n+1)} = \min\!\Bigl(1,\; w_{s \to t}^{(n)} + \eta \cdot f_{s,t}^{(W)}\Bigr) \quad \text{(co-activated pairs)}$$
+$$w_{s \to t}^{(n+1)} = \min\Bigl(1,\; w_{s \to t}^{(n)} + \eta \cdot f_{s,t}^{(W)}\Bigr) \quad \text{(co-activated pairs)}$$
 
 $$w_{s \to t}^{(n+1)} = w_{s \to t}^{(n)} \cdot \bigl(1 - \lambda\bigr) \quad \text{(idle pairs)}$$
 
-*where $f_{s,t}^{(W)}$ is the co-activation frequency of the pair over the most recent $W$-cycle sliding window, $\eta$ is the strengthening rate, and $\lambda$ is the decay rate. Any connection whose weight falls below the pruning threshold $\theta$ is deleted entirely.*
+where $f_{s,t}^{(W)}$ is the co-activation frequency of the pair over the most recent $W$-cycle sliding window, $\eta$ is the strengthening rate, and $\lambda$ is the decay rate. Any connection whose weight falls below the pruning threshold $\theta$ is deleted entirely.
 
 ---
 
@@ -319,7 +319,7 @@ The density $\rho$ of the graph $\mathcal{G}_t$ is provably bounded at all times
 
 $$\frac{|E_{\text{seed}}|}{|V|^2} \;\leq\; \rho(\mathcal{G}_t) \;\leq\; 1.0$$
 
-*where $E_{\text{seed}}$ is the immutable static scaffolding that prevents cold-start failures, and $V$ is the set of active modules. The graph cannot expand without bound — memory usage is mathematically controlled.*
+where $E_{\text{seed}}$ is the immutable static scaffolding that prevents cold-start failures, and $V$ is the set of active modules. The graph cannot expand without bound — memory usage is mathematically controlled.
 
 ---
 
@@ -327,16 +327,16 @@ $$\frac{|E_{\text{seed}}|}{|V|^2} \;\leq\; \rho(\mathcal{G}_t) \;\leq\; 1.0$$
 
 The salience boost $\beta$ awarded to a module $m$ in coalition $C$ on query $q$ is:
 
-$$\beta(m, C, q) = \min\!\bigl(\beta_{\max},\; \sigma_C \cdot \varphi(|C|) \cdot \gamma(t_C) \cdot \mathrm{sim}(\vec{v}_C,\, \vec{v}_q)\bigr)$$
+$$\beta(m, C, q) = \min\bigl(\beta_{\max},\; \sigma_C \cdot \varphi(|C|) \cdot \gamma(t_C) \cdot \mathrm{sim}(\vec{v}_C, \vec{v}_q)\bigr)$$
 
-*where:*
+where:
 
-- *$\sigma_C$ = coalition strength — mean pairwise co-activation frequency across all members*
-- *$\varphi(|C|)$ = size-scaling factor — rewards larger, more coordinated coalitions*
-- *$\gamma(t_C) = \max\!\bigl(\gamma_{\min},\; 1 - \delta \cdot \max(0,\, t_C - \tau)\bigr)$ — fatigue factor that decays once a coalition has been continuously active beyond $\tau$ cycles, preventing indefinite dominance*
-- *$\mathrm{sim}(\vec{v}_C, \vec{v}_q) = \dfrac{\vec{v}_C \cdot \vec{v}_q}{\|\vec{v}_C\|\,\|\vec{v}_q\|}$ — cosine similarity between the coalition's learned semantic centroid and the incoming query vector*
+- $\sigma_C$ = coalition strength — mean pairwise co-activation frequency across all members
+- $\varphi(|C|)$ = size-scaling factor — rewards larger, more coordinated coalitions
+- $\gamma(t_C) = \max\bigl(\gamma_{\min}, 1 - \delta \cdot \max(0, t_C - \tau)\bigr)$ — fatigue factor that decays once a coalition has been continuously active beyond $\tau$ cycles, preventing indefinite dominance
+- $\mathrm{sim}(\vec{v}_C, \vec{v}_q) = \dfrac{\vec{v}_C \cdot \vec{v}_q}{\|\vec{v}_C\| \|\vec{v}_q\|}$ — cosine similarity between the coalition's learned semantic centroid and the incoming query vector
 
-*The resonance term $\mathrm{sim}(\vec{v}_C, \vec{v}_q)$ is the Contextual Resonance gate: if similarity falls below threshold $\theta_r$, the boost is suppressed entirely. The coalition stays dormant regardless of its historical strength — context-blind firing is structurally prevented.*
+The resonance term $\mathrm{sim}(\vec{v}_C, \vec{v}_q)$ is the Contextual Resonance gate: if similarity falls below threshold $\theta_r$, the boost is suppressed entirely. The coalition stays dormant regardless of its historical strength — context-blind firing is structurally prevented.
 
 ---
 
@@ -346,7 +346,7 @@ After each successful task contribution, the coalition's semantic centroid is up
 
 $$\vec{v}_C^{\,(t+1)} = (1 - \alpha)\,\vec{v}_C^{\,(t)} + \alpha\,\vec{v}_q \qquad \text{when } s_q > \theta_c$$
 
-*where $\alpha$ is the centroid learning rate, $\vec{v}_q$ is the query's embedding vector, $s_q$ is the coalition's contribution score on this query, and $\theta_c$ is the minimum contribution required for a centroid update. This equation is what makes coalitions self-aware: they learn their domain of expertise automatically, simply by doing their job.*
+where $\alpha$ is the centroid learning rate, $\vec{v}_q$ is the query's embedding vector, $s_q$ is the coalition's contribution score on this query, and $\theta_c$ is the minimum contribution required for a centroid update. This equation is what makes coalitions self-aware: they learn their domain of expertise automatically, simply by doing their job.
 
 ---
 
@@ -360,7 +360,7 @@ Empirically, the convergence curve follows the form:
 
 $$L(t) \approx L_0 \cdot e^{-\alpha t} + L_{\min}$$
 
-*with empirically verified parameters $\alpha = 0.6316$ (improvement rate) and asymptotic speedup $\beta = 0.4437$ — confirming a mathematically inevitable **44% long-run latency reduction**.*
+with empirically verified parameters $\alpha = 0.6316$ (improvement rate) and asymptotic speedup $\beta = 0.4437$ — confirming a mathematically inevitable **44% long-run latency reduction**.
 
 ---
 
@@ -397,7 +397,7 @@ The latency decay curve $L(t) \approx L_0 \cdot e^{-\alpha t} + L_{\min}$ was fi
 
 Multiple coalitions show speedup > 1.0× across all task types. The 44% figure is the mathematically proven asymptotic limit. Current observed speedups (1.13× average, 1.80× peak) are early-stage measurements — the system continues improving with additional queries.
 
-**Figure 1 — Asymptotic Latency Convergence** *(values computed from verified fit: $\alpha=0.6316$, $\beta=0.4437$)*
+**Figure 1 — Asymptotic Latency Convergence** (values computed from verified fit: $\alpha=0.6316$, $\beta=0.4437$)
 
 ```mermaid
 xychart-beta
@@ -407,7 +407,7 @@ xychart-beta
     line [100, 79.2, 68.2, 62.3, 59.2, 57.5, 56.6, 56.2, 55.9, 55.8, 55.7]
 ```
 
-*Curve follows $L(t) \approx L_0 \cdot e^{-0.6316\,t} + L_{\min}$. The system converges to 55.7% of its starting latency — a **44% permanent reduction** — without retraining or manual redesign.*
+Curve follows $L(t) \approx L_0 \cdot e^{-0.6316t} + L_{\min}$. The system converges to 55.7% of its starting latency — a **44% permanent reduction** — without retraining or manual redesign.
 
 **Figure 2 — Coalition Speedup by Task Type** *(live system, 300 queries)*
 
@@ -453,11 +453,11 @@ The Morphodynamic Fabric solves the **static cost of intelligence** — a proble
 
 ### The ROI Case
 
-A system processing **10,000 queries/day** at $0.02 per query = **$73,000/year** in compute.
+A system processing **10,000 queries/day** at \$0.02 per query = **\$73,000/year** in compute.
 
 A 44% asymptotic efficiency gain — fewer reasoning steps, fewer tokens, lower coordination overhead — conservatively maps to a **30% cost reduction**:
 
-> **$73,000 × 30% = $21,900 saved per year. From one deployment.**
+> **\$73,000 × 30% = \$21,900 saved per year. From one deployment.**
 
 At 100,000+ queries/day — typical enterprise scale — the arithmetic of self-optimization becomes the most important infrastructure investment available.
 
