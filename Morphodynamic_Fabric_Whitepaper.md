@@ -9,7 +9,7 @@
 
 ![Architecture Diagram](assets/architecture_diagram.png)
 
-_Figure 1: The Morphodynamic Fabric — TSN and ECA layers coupled through the Contextual Resonance Gate, with feedback-driven structural plasticity._
+*Figure 1: The Morphodynamic Fabric — TSN and ECA layers coupled through the Contextual Resonance Gate, with feedback-driven structural plasticity.*
 
 ---
 
@@ -36,7 +36,7 @@ _Figure 1: The Morphodynamic Fabric — TSN and ECA layers coupled through the C
 │   │                                                                      │  │
 │   │    [A]──w=0.9──►[B]──w=0.7──►[C]    (strong, surviving paths)        │  │
 │   │    [A]──w=0.1──►[D]           ✗      (weak, pruned)                  │  │
-│   └─────────────────────────────────────────────────────────────────-────┘  │
+│   └─────────────────────────────────────────────────────────────────────┘  │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -221,27 +221,37 @@ A coalition whose centroid aligns strongly with the query ignites — its salien
 
 ```mermaid
 flowchart TD
-    Q["🔍 Incoming Query\n(embedding  v_q)"]
-    Q --> BROAD["Broadcast v_q to all active\ncoalitions — in parallel, no bottleneck"]
+    Q["🔍 Incoming Query\n(embedding  v̄_q  ∈ ℝᵈ)"]
+    Q --> BROAD["Broadcast v̄_q to all active coalitions\nin parallel — no central bottleneck"]
 
-    BROAD --> C1["Coalition: Analytical/Math\n📍 centroid v_C1"]
-    BROAD --> C2["Coalition: Legal/Compliance\n📍 centroid v_C2"]
-    BROAD --> C3["Coalition: Planning/Causal\n📍 centroid v_C3"]
+    BROAD --> C1["Coalition: Analytical / Math\n📍 centroid  v̄_C₁"]
+    BROAD --> C2["Coalition: Legal / Compliance\n📍 centroid  v̄_C₂"]
+    BROAD --> C3["Coalition: Planning / Causal\n📍 centroid  v̄_C₃"]
 
-    C1 --> SIM1{"sim(v_C1, v_q)\n= 0.89 ≥ θᵣ"}
-    C2 --> SIM2{"sim(v_C2, v_q)\n= 0.11 < θᵣ"}
-    C3 --> SIM3{"sim(v_C3, v_q)\n= 0.72 ≥ θᵣ"}
+    C1 --> SIM1{"sim(v̄_C₁, v̄_q)\n= 0.89  ≥  θᵣ"}
+    C2 --> SIM2{"sim(v̄_C₂, v̄_q)\n= 0.11  <  θᵣ"}
+    C3 --> SIM3{"sim(v̄_C₃, v̄_q)\n= 0.72  ≥  θᵣ"}
 
     SIM1 -- "IGNITE" --> BOOST1["✅  Boost × 0.89\nModules A, B, C  ↑ salience"]
     SIM2 -- "SUPPRESS" --> SUPP2["❌  Boost → 0\nModules D, E stay dormant"]
     SIM3 -- "IGNITE" --> BOOST3["✅  Boost × 0.72\nModules F, G  ↑ salience"]
 
-    BOOST1 --> UPD1["Centroid v_C1 ← EMA update\n(coalition earned it)"]
-    SUPP2  --> UPD2["Centroid v_C2 unchanged\n(no contribution → no update)"]
-    BOOST3 --> UPD3["Centroid v_C3 ← EMA update\n(coalition earned it)"]
+    BOOST1 --> UPD1["v̄_C₁ ← (1 − α)·v̄_C₁ + α·v̂_q\n(coalition earned update)"]
+    SUPP2  --> UPD2["v̄_C₂  unchanged\n(no contribution → no update)"]
+    BOOST3 --> UPD3["v̄_C₃ ← (1 − α)·v̄_C₃ + α·v̂_q\n(coalition earned update)"]
+
+    style SIM1 fill:#1a3d1a,stroke:#3fb950,color:#e6edf3
+    style SIM2 fill:#3d1a1a,stroke:#f85149,color:#e6edf3
+    style SIM3 fill:#1a3d1a,stroke:#3fb950,color:#e6edf3
+    style BOOST1 fill:#1a2d1a,stroke:#3fb950,color:#e6edf3
+    style SUPP2  fill:#2d1a1a,stroke:#f85149,color:#e6edf3
+    style BOOST3 fill:#1a2d1a,stroke:#3fb950,color:#e6edf3
+    style UPD1 fill:#1a1a2d,stroke:#79c0ff,color:#e6edf3
+    style UPD2 fill:#1a1a1a,stroke:#8b949e,color:#8b949e
+    style UPD3 fill:#1a1a2d,stroke:#79c0ff,color:#e6edf3
 ```
 
-_Each cycle the coalitions that fire also sharpen their own centroid via the EMA rule. The coalitions that stay dormant preserve their centroid exactly. Over time: specialists become more specialized, and context-blind firing becomes structurally impossible._
+*Each cycle the coalitions that fire also sharpen their own centroid via the EMA rule. The coalitions that stay dormant preserve their centroid exactly. Over time: specialists become more specialized, and context-blind firing becomes structurally impossible.*
 
 **Why this is architecturally superior to routing:**
 
@@ -297,7 +307,7 @@ The Morphodynamic Fabric is governed by **8 formally proven theorems**. Together
 
 ### The Governing Equations
 
-The theorems above are enforced by four concrete mathematical laws operating at runtime. These describe the _physics_ of the Fabric — what the system is constrained to do, not how it is implemented.
+The theorems above are enforced by four concrete mathematical laws operating at runtime. These describe the *physics* of the Fabric — what the system is constrained to do, not how it is implemented.
 
 ---
 
@@ -389,11 +399,11 @@ All 8 theorems have been:
 
 The latency decay curve $L(t) \approx L_0 \cdot e^{-\alpha t} + L_{\min}$ was fit against live system measurements:
 
-| Parameter             | Symbol   | Fitted Value | Meaning                                       |
-| --------------------- | -------- | ------------ | --------------------------------------------- |
-| Improvement rate      | $\alpha$ | **0.6316**   | How fast the system learns — higher is faster |
-| Asymptotic efficiency | $\beta$  | **0.4437**   | Long-run gain fraction → **44% speedup**      |
-| Goodness of fit       | $R^2$    | **0.525**    | Strong statistical validity (threshold: 0.3)  |
+| Parameter | Symbol | Fitted Value | Meaning |
+| --------- | ------ | ------------ | ------- |
+| Improvement rate | $\alpha$ | **0.6316** | How fast the system learns — higher is faster |
+| Asymptotic efficiency | $\beta$ | **0.4437** | Long-run gain fraction → **44% speedup** |
+| Goodness of fit | $R^2$ | **0.525** | Strong statistical validity (threshold: 0.3) |
 
 Multiple coalitions show speedup > 1.0× across all task types. The 44% figure is the mathematically proven asymptotic limit. Current observed speedups (1.13× average, 1.80× peak) are early-stage measurements — the system continues improving with additional queries.
 
@@ -409,7 +419,7 @@ xychart-beta
 
 Curve follows $L(t) \approx L_0 \cdot e^{-0.6316t} + L_{\min}$. The system converges to 55.7% of its starting latency — a **44% permanent reduction** — without retraining or manual redesign.
 
-**Figure 2 — Coalition Speedup by Task Type** _(live system, 300 queries)_
+**Figure 2 — Coalition Speedup by Task Type** *(live system, 300 queries)*
 
 ```mermaid
 xychart-beta
@@ -419,7 +429,7 @@ xychart-beta
     bar [1.80, 1.21, 1.17, 1.13]
 ```
 
-_All task types exceed 1.0× — the floor below which a system would be regressing. The Analytical peak of 1.80× demonstrates the upper bound as coalitions saturate their specialization._
+*All task types exceed 1.0× — the floor below which a system would be regressing. The Analytical peak of 1.80× demonstrates the upper bound as coalitions saturate their specialization.*
 
 ### Efficiency Mechanism (Lemmas 3.1 & 3.2)
 
@@ -497,7 +507,7 @@ The Morphodynamic Fabric is not a wrapper. It is not a framework built on top of
 
 The implementation is proprietary. The mathematical specifications published here are sufficient for independent verification of the claims and insufficient to replicate the calibrated production system.
 
-_Correspondence: github.com/adeyomilawal. Technical inquiries and research collaboration requests are welcome._
+*Correspondence: github.com/adeyomilawal. Technical inquiries and research collaboration requests are welcome.*
 
 ---
 
@@ -505,21 +515,21 @@ _Correspondence: github.com/adeyomilawal. Technical inquiries and research colla
 
 The Morphodynamic Fabric is currently running in production with the following technical footprint:
 
-| Component              | Specification                                                  |
-| ---------------------- | -------------------------------------------------------------- |
-| **Core Engine**        | Python 3.10–3.12 (AsyncIO)                                     |
-| **Vector Database**    | Qdrant (local persistence + cloud-ready)                       |
-| **Embedding Model**    | all-MiniLM-L6-v2 (CPU-optimized via fastembed)                 |
-| **Relational Store**   | PostgreSQL (async via asyncpg)                                 |
-| **Cache Layer**        | Redis (hot-path coalition cache)                               |
-| **Memory Footprint**   | < 200MB cognitive substrate (vs. 4GB+ for standard LLM agents) |
-| **Avg Latency (Cold)** | ~1,200ms (Standard LLM Agent, no coalition)                    |
-| **Avg Latency (Hot)**  | ~240ms (Coalition Hit, post-stabilization)                     |
-| **Speedup**            | **44% average reduction** across 100-query benchmark           |
+| Component | Specification |
+|-----------|--------------|
+| **Core Engine** | Python 3.10–3.12 (AsyncIO) |
+| **Vector Database** | Qdrant (local persistence + cloud-ready) |
+| **Embedding Model** | all-MiniLM-L6-v2 (CPU-optimized via fastembed) |
+| **Relational Store** | PostgreSQL (async via asyncpg) |
+| **Cache Layer** | Redis (hot-path coalition cache) |
+| **Memory Footprint** | < 200MB cognitive substrate (vs. 4GB+ for standard LLM agents) |
+| **Avg Latency (Cold)** | ~1,200ms (Standard LLM Agent, no coalition) |
+| **Avg Latency (Hot)** | ~240ms (Coalition Hit, post-stabilization) |
+| **Speedup** | **44% average reduction** across 100-query benchmark |
 
 ![Latency Benchmark](assets/latency_benchmark.png)
 
-_Figure 2: Empirical latency benchmark — Morphodynamic Fabric coalition hits vs. standard LLM agent cold-starts across 10 processing cycles. Coalition stabilization point occurs at cycle 5._
+*Figure 2: Empirical latency benchmark — Morphodynamic Fabric coalition hits vs. standard LLM agent cold-starts across 10 processing cycles. Coalition stabilization point occurs at cycle 5.*
 
 ---
 
