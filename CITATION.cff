@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you reference the Morphodynamic Fabric architecture, please cite it as below."
+authors:
+  - family-names: "Adeyomi"
+    given-names: "Lawal"
+    affiliation: "Independent Research — Lagos, Nigeria"
+    title: "Lead AI Systems Architect"
+title: "The Morphodynamic Fabric: A Self-Organizing Neuro-Symbolic Architecture for Efficient Autonomous Agents"
+version: 1.0.0
+date-released: 2026-02-27
+url: "https://github.com/adeyomilawal/morphodynamic-fabric"
+abstract: >
+  A novel two-layer architecture combining a Topological Semantic Network (TSN)
+  for structural memory management with an Emergent Coalition Assembler (ECA)
+  for dynamic concept grouping. Achieves 44% average latency reduction over
+  standard LLM agent cold-starts while reducing memory footprint by 96%
+  versus full LLM deployments.
+keywords:
+  - AI architecture
+  - autonomous agents
+  - semantic networks
+  - emergent computation
+  - neuroplasticity
+  - coalition formation
+  - efficiency optimization
+license: "Proprietary"

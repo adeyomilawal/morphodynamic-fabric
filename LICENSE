@@ -1,0 +1,34 @@
+Proprietary Research License
+
+Copyright (c) 2026 Adeyomi Lawal — Lagos, Nigeria
+
+The concepts, mathematical formalizations (TSN/ECA), architectural diagrams,
+theorems, and all written documentation contained in this repository are the
+intellectual property of the author.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this documentation to VIEW and CITE the research for academic, educational,
+or evaluation purposes, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the documentation.
+
+2. Proper attribution must be given to the author when referencing or building
+   upon these ideas in academic or commercial work.
+
+3. THE SOFTWARE IMPLEMENTATION (Source Code) IS NOT INCLUDED IN THIS REPOSITORY.
+   The mathematical proofs and architectural specifications describe a working
+   system; the implementation remains proprietary.
+
+4. THE CONCEPTS, THEOREMS, AND ARCHITECTURAL PATTERNS MAY NOT BE USED FOR
+   COMMERCIAL COMPETITION OR PRODUCT DEVELOPMENT WITHOUT EXPLICIT WRITTEN
+   PERMISSION FROM THE AUTHOR.
+
+5. Derivative research works must be clearly distinguished from this original
+   work and must cite the original author.
+
+THE DOCUMENTATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY ARISING FROM THE USE OF THIS DOCUMENTATION.
+
+For licensing inquiries or collaboration, open an issue on this repository.
