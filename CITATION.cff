@@ -10,11 +10,12 @@ version: 1.0.0
 date-released: 2026-02-27
 url: "https://github.com/adeyomilawal/morphodynamic-fabric"
 abstract: >
-  A novel two-layer architecture combining a Topological Semantic Network (TSN)
-  for structural memory management with an Emergent Coalition Assembler (ECA)
-  for dynamic concept grouping. Achieves 44% average latency reduction over
-  standard LLM agent cold-starts while reducing memory footprint by 96%
-  versus full LLM deployments.
+  A novel two-layer architecture combining Transient Scaffolding Networks (TSN)
+  for structural plasticity and memory management with an Emergent Coalition
+  Architecture (ECA) for dynamic concept grouping and context-aware routing.
+  Achieves 44% average latency reduction over standard LLM agent cold-starts
+  while reducing memory footprint by 96% versus full LLM deployments.
+  Formally proven across 9 theorems and 1 corollary.
 keywords:
   - AI architecture
   - autonomous agents

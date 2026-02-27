@@ -18,8 +18,8 @@ The **Morphodynamic Fabric** is a novel two-layer cognitive architecture that gi
 
 It is composed of:
 
-- **TSN (Topological Semantic Network)** — A living structural graph that rewrites itself via Hebbian strengthening and temporal decay. Proven convergent by Lyapunov stability analysis.
-- **ECA (Emergent Coalition Assembler)** — A dynamic grouping mechanism that clusters semantically-related concepts into coalitions, enabling sub-linear retrieval over large knowledge bases.
+- **TSN (Transient Scaffolding Networks)** — A living structural graph that rewrites itself via Hebbian strengthening and temporal decay. Proven convergent by Lyapunov stability analysis.
+- **ECA (Emergent Coalition Architecture)** — A dynamic grouping mechanism that clusters semantically-related modules into coalitions, enabling context-aware routing and sub-linear retrieval over large knowledge bases.
 - **Contextual Resonance Gate** — A semantic filter that routes queries directly to the most relevant coalition, bypassing full-graph search.
 
 ---
@@ -33,7 +33,7 @@ It is composed of:
 | Average speedup | — | **44% reduction** |
 | Memory footprint | 4GB+ | **< 200MB** |
 | Validation queries | — | 300 (6 task types) |
-| Theorems verified | — | 8/8 ✅ |
+| Theorems verified | — | 9/9 + 1 corollary ✅ |
 
 ![Latency Benchmark](assets/latency_benchmark.png)
 
