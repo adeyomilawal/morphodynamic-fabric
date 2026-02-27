@@ -213,7 +213,7 @@ The Morphodynamic Fabric resolves this through **Contextual Resonance**: a distr
 
 At inference time, when a query enters the fabric, its semantic vector $\vec{v}_q$ is broadcast simultaneously to every active coalition. Each coalition independently measures the resonance between the incoming signal and its own learned centroid $\vec{v}_C$:
 
-$$\operatorname{sim}(\vec{v}_C, \vec{v}_q) = \frac{\vec{v}_C \cdot \vec{v}_q}{\|\vec{v}_C\|\,\|\vec{v}_q\|}$$
+$$\mathrm{sim}(\vec{v}_C, \vec{v}_q) = \frac{\vec{v}_C \cdot \vec{v}_q}{\|\vec{v}_C\|\,\|\vec{v}_q\|}$$
 
 A coalition whose centroid aligns strongly with the query ignites — its salience boost is amplified by this resonance score. A coalition whose centroid diverges falls below threshold $\theta_r$ and stays dormant — its boost is suppressed to zero, regardless of its historical activation strength.
 
@@ -327,16 +327,16 @@ $$\frac{|E_{\text{seed}}|}{|V|^2} \;\leq\; \rho(\mathcal{G}_t) \;\leq\; 1.0$$
 
 The salience boost $\beta$ awarded to a module $m$ in coalition $C$ on query $q$ is:
 
-$$\beta(m, C, q) = \min\!\bigl(\beta_{\max},\; \sigma_C \cdot \varphi(|C|) \cdot \gamma(t_C) \cdot \operatorname{sim}(\vec{v}_C,\, \vec{v}_q)\bigr)$$
+$$\beta(m, C, q) = \min\!\bigl(\beta_{\max},\; \sigma_C \cdot \varphi(|C|) \cdot \gamma(t_C) \cdot \mathrm{sim}(\vec{v}_C,\, \vec{v}_q)\bigr)$$
 
 *where:*
 
 - *$\sigma_C$ = coalition strength — mean pairwise co-activation frequency across all members*
 - *$\varphi(|C|)$ = size-scaling factor — rewards larger, more coordinated coalitions*
 - *$\gamma(t_C) = \max\!\bigl(\gamma_{\min},\; 1 - \delta \cdot \max(0,\, t_C - \tau)\bigr)$ — fatigue factor that decays once a coalition has been continuously active beyond $\tau$ cycles, preventing indefinite dominance*
-- *$\operatorname{sim}(\vec{v}_C, \vec{v}_q) = \dfrac{\vec{v}_C \cdot \vec{v}_q}{\|\vec{v}_C\|\,\|\vec{v}_q\|}$ — cosine similarity between the coalition's learned semantic centroid and the incoming query vector*
+- *$\mathrm{sim}(\vec{v}_C, \vec{v}_q) = \dfrac{\vec{v}_C \cdot \vec{v}_q}{\|\vec{v}_C\|\,\|\vec{v}_q\|}$ — cosine similarity between the coalition's learned semantic centroid and the incoming query vector*
 
-*The resonance term $\operatorname{sim}(\vec{v}_C, \vec{v}_q)$ is the Contextual Resonance gate: if similarity falls below threshold $\theta_r$, the boost is suppressed entirely. The coalition stays dormant regardless of its historical strength — context-blind firing is structurally prevented.*
+*The resonance term $\mathrm{sim}(\vec{v}_C, \vec{v}_q)$ is the Contextual Resonance gate: if similarity falls below threshold $\theta_r$, the boost is suppressed entirely. The coalition stays dormant regardless of its historical strength — context-blind firing is structurally prevented.*
 
 ---
 
